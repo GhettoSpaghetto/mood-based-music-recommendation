@@ -1,0 +1,117 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* App.css */
+:root {
+  --spotify-green: #1DB954;
+  --bg-dark: #121212;
+  --card-bg: #181818;
+  --text-main: #FFFFFF;
+  --text-dim: #b3b3b3;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.app-shell {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header Styles */
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #1DB954, #1ed760);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Upload Section */
+.upload-section {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #282828;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+  color: var(--text-dim);
+}
+
+button {
+  background-color: var(--spotify-green);
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 500px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+  transform: scale(1.05);
+  background-color: #1ed760;
+}
+
+button:disabled {
+  background-color: #535353;
+  cursor: not-allowed;
+}
+
+/* Results Section */
+.results-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.mood-badge {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--spotify-green);
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.song-card {
+  background: #282828;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background 0.3s;
+}
+
+.song-card:hover {
+  background: #3e3e3e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
